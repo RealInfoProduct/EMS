@@ -20,42 +20,47 @@ export class ThmHeaderComponent implements OnInit {
 
   //  this one use for a handle click and double click on one icon
 
-  @Output() singleClick = new EventEmitter();
-  @Output() doubledClick = new EventEmitter();
+  // @Output() singleClick = new EventEmitter();
+  // @Output() doubledClick = new EventEmitter();
 
-  timer:any
-  stopClick:boolean = false
+  // timer:any
+  // stopClick:boolean = false
 
-  @HostListener('click', ['$event']) onClick(e: any) {
-    this.timer = 0
-    this.stopClick = false;
+  // @HostListener('click', ['$event']) onClick(e: any) {
+  //   this.timer = 0
+  //   this.stopClick = false;
 
-    this.timer = setTimeout(() => {
-      if (!this.stopClick) {
-        this.menuStatus = !this.menuStatus
-        this.sideNavToggled.emit(this.menuStatus)
-      }
-    }, 200);
-  }
+  //   this.timer = setTimeout(() => {
+  //     if (!this.stopClick) {
+  //       this.menuStatus = !this.menuStatus
+  //       this.sideNavToggled.emit(this.menuStatus)
+  //     }
+  //   }, 200);
+  // }
 
-  @HostListener('dblclick', ['$event']) onDbClick(e: any) {
-    this.stopClick = true;
-    clearTimeout(this.timer)
-    this.menuStatusClose = !this.menuStatusClose
-    this.sideNavToggledClosed.emit(this.menuStatusClose)
-  }
+  // @HostListener('dblclick', ['$event']) onDbClick(e: any) {
+  //   this.stopClick = true;
+  //   clearTimeout(this.timer)
+  //   this.menuStatusClose = !this.menuStatusClose
+  //   this.sideNavToggledClosed.emit(this.menuStatusClose)
+  // }
 
   ngOnInit(): void {
 
   }
 
-  singleHandler(event:any){
-    console.log('in Single clicked' , event);
+  singleClicked(){
+    this.menuStatus = !this.menuStatus
+    this.sideNavToggled.emit(this.menuStatus)
   }
 
-  doubleHandler(event:any){
-    console.log('in Doubled clicked' , event);
-  }
+  // singleHandler(event:any){
+  //   console.log('in Single clicked' , event);
+  // }
+
+  // doubleHandler(event:any){
+  //   console.log('in Doubled clicked' , event);
+  // }
 
   logOut(): void{
     localStorage.clear();
