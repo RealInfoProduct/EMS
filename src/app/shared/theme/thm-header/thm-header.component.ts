@@ -1,4 +1,6 @@
 import { Component, EventEmitter, HostListener, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
+import { FirebaseService } from 'src/app/service/firebase.service';
 
 @Component({
   selector: 'app-thm-header',
@@ -14,7 +16,7 @@ export class ThmHeaderComponent implements OnInit {
   menuStatusClose: boolean = true
  
 
-  constructor() { }
+  constructor(private firebaseService:FirebaseService,private router:Router) { }
 
   //  this one use for a handle click and double click on one icon
 
@@ -53,6 +55,13 @@ export class ThmHeaderComponent implements OnInit {
 
   doubleHandler(event:any){
     console.log('in Doubled clicked' , event);
+  }
+
+  logOut(): void{
+    localStorage.clear();
+    this.firebaseService.logout().subscribe(()=>{
+      this.router.navigate(['/login'])
+    })
   }
 
 }

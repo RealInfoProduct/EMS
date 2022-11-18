@@ -1,6 +1,6 @@
 app-thm-header {
     position: fixed;
-    width: 100%;
+    width: calc(100% - 66px);
     top: 0;
     left: 66px;
     height: 4rem;
@@ -11,13 +11,15 @@ app-thm-header {
 }
 
 .theam-header-open{
+    width: calc(100% - 300px);
     left: 300px;
     transition: left 450ms linear;
 }
 
 .theam-header-close{
+    width: 100%;
     left: 0px;
-    transition: left 450ms linear;
+    // transition: left 450ms linear;
 }
 
 main {
