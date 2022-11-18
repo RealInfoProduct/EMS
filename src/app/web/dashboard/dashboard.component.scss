@@ -1,0 +1,37 @@
+@import '../../../scss/common';
+
+    .dashboard_item{
+        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 10%), 0 2px 4px -1px rgb(0 0 0 / 6%);
+        .card_icon_1{
+            @include dashboard_icon
+        }
+        .card_icon_2{
+            @include dashboard_icon;
+            background: linear-gradient(195deg,#ec407a,#d81b60);
+        }
+        .card_icon_3{
+            @include dashboard_icon;
+            background: linear-gradient(195deg,#66bb6a,#43a047);
+        }
+        .card_icon_4{
+            @include dashboard_icon;
+            background: linear-gradient(195deg,#49a3f1,#1a73e8);
+        }
+        label{
+            padding: 15px;
+            font-size: 20px;
+        }
+    }
+
+    .dashboard_list {
+        margin: 0 auto;
+        display: grid;
+        gap: 1rem;
+      }
+
+      @media (min-width: 600px) {
+        .dashboard_list { grid-template-columns: repeat(2, 1fr); }
+      }
+      @media (min-width: 900px) {
+        .dashboard_list { grid-template-columns: repeat(4, 1fr); }
+      }

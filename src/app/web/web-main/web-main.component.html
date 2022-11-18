@@ -1,0 +1,15 @@
+<div class="container-fluid g-0">
+        <!-- <p>{{sideNavStatus}}</p>
+        <p>{{sideNavStatusClose}}</p> -->
+    <app-thm-header [ngClass]="{'theam-header-open' : sideNavStatus}" (sideNavToggled)="sideNavStatus = $event;" [ngClass]="{'theam-header-close' : sideNavStatusClose}"  (sideNavToggledClosed)="sideNavStatusClose = $event">
+        <!-- -->
+    </app-thm-header>
+    <main>
+        <app-thm-menubar [ngClass]="{'app-side-nav-open' : sideNavStatus}" [ngClass]="{'theam-menubar-close' : sideNavStatusClose}">
+            <!-- [sideNavStatus]="sideNavStatus"    [ngClass]="{'app-side-nav-close' : sideNavStatusClose}"-->
+        </app-thm-menubar>
+        <div class="display-area p-3" [ngClass]="{'display-area-shrink' : sideNavStatus}" [ngClass]="{'display-area-shrink-close' : sideNavStatusClose}">
+            <router-outlet></router-outlet>
+        </div>
+    </main>
+</div>
