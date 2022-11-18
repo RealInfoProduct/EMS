@@ -22,7 +22,7 @@ import { AutoCompleteModule } from 'primeng/autocomplete';
 import {SelectButtonModule} from 'primeng/selectbutton';
 import {ProgressBarModule} from 'primeng/progressbar'
 import {InputSwitchModule} from 'primeng/inputswitch';
-import {PanelMenuModule} from 'primeng/panelmenu';
+
 
 const PRIME_NG = [
   CalendarModule,
@@ -39,7 +39,6 @@ const PRIME_NG = [
   SelectButtonModule,
   ProgressBarModule,
   InputSwitchModule,
-  PanelMenuModule,
   // ScrollPanelModule,
  
 ]
