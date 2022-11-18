@@ -12,6 +12,13 @@ import { getFirestore,provideFirestore} from '@angular/fire/firestore';
 import { environment } from 'src/environments/environment'
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { AngularFireModule } from '@angular/fire/compat';
+// translation use 
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { HttpClient } from '@angular/common/http';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
 
 @NgModule({
   declarations: [
@@ -30,6 +37,15 @@ import { AngularFireModule } from '@angular/fire/compat';
 
     // this one use for authentication handle error only
     AngularFireModule.initializeApp(environment.firebaseConfig),
+
+     // translation use 
+     TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]

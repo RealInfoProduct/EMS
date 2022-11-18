@@ -1,6 +1,7 @@
 import { Component, EventEmitter, HostListener, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { FirebaseService } from 'src/app/service/firebase.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-thm-header',
@@ -16,7 +17,9 @@ export class ThmHeaderComponent implements OnInit {
   menuStatusClose: boolean = true
  
 
-  constructor(private firebaseService:FirebaseService,private router:Router) { }
+  constructor(private firebaseService:FirebaseService,private router:Router,private translate: TranslateService) { 
+    translate.setDefaultLang('en')
+  }
 
   //  this one use for a handle click and double click on one icon
 
@@ -67,6 +70,10 @@ export class ThmHeaderComponent implements OnInit {
     this.firebaseService.logout().subscribe(()=>{
       this.router.navigate(['/login'])
     })
+  }
+
+  languageChange(){
+    this.translate.use()
   }
 
 }
