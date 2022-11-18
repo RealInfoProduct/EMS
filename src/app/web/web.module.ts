@@ -5,6 +5,9 @@ import { WebRoutingModule } from './web-routing.module';
 import { WebMainComponent } from '../web/web-main/web-main.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SharedModule } from '../shared/shared.module';
+import { AddEmployeeComponent } from './add-employee/add-employee.component';
+import { BonusAttendanceComponent } from './bonus-attendance/bonus-attendance.component';
+import { ReportComponent } from './report/report.component';
 
 
 
@@ -12,6 +15,9 @@ import { SharedModule } from '../shared/shared.module';
   declarations: [
     WebMainComponent,
     DashboardComponent,
+    AddEmployeeComponent,
+    BonusAttendanceComponent,
+    ReportComponent,
     
   ],
   imports: [
