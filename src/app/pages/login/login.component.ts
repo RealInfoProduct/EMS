@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-// import { AngularFireAuth } from '@angular/fire/compat/auth';
-// import { FirebaseService } from 'src/app/service/firebase.service';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { FirebaseService } from 'src/app/service/firebase.service';
 
 @Component({
   selector: 'app-login',
@@ -16,8 +16,8 @@ export class LoginComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder,
               private router:Router,
-              // private afAuth:AngularFireAuth,
-              // private firebaseService:FirebaseService
+              private afAuth:AngularFireAuth,
+              private firebaseService:FirebaseService
               ) { }
 
   ngOnInit(): void {
@@ -50,20 +50,20 @@ export class LoginComponent implements OnInit {
   //   console.log(this.loginForm.value);
   // }
 
-  // submit() {
-  //   return this.afAuth.signInWithEmailAndPassword(this.loginForm.value.username, this.loginForm.value.password)
-  //     .then((result) => {
-  //       this.afAuth.authState.subscribe((user) => {
-  //         if (user) {
-  //           alert("Login Successfully !!")
-  //           this.router.navigate(['web/dashboard'])
-  //         }
-  //       });
-  //     })
-  //     .catch((error) => {
-  //       window.alert(error.message);
-  //     });
-  // }
+  submit() {
+    return this.afAuth.signInWithEmailAndPassword(this.loginForm.value.username, this.loginForm.value.password)
+      .then((result) => {
+        this.afAuth.authState.subscribe((user) => {
+          if (user) {
+            alert("Login Successfully !!")
+            this.router.navigate(['web/dashboard'])
+          }
+        });
+      })
+      .catch((error) => {
+        window.alert(error.message);
+      });
+  }
 
   navigateToRegister(){
     this.router.navigate(['/register'])

@@ -61,38 +61,40 @@
 <div class="container-fluid">
     <div class="container">
         <div class="login">
-            <div class="logo">
-                <img src="../../../assets/img/logo-03.svg" />
-            </div>
-            <div class="login-text">
-               <h4>Login into account</h4>
-               <span>Use your credentials to access your account.</span>
-            </div>
-            <div class="input-field">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="email">
-                            <input type="password" placeholder="Email Address" class="form-control" aria-describedby="passwordHelpInline">
+            <form action="" [formGroup]="loginForm" (ngSubmit)="submit()">
+                <div class="logo">
+                    <img src="../../../assets/img/logo-03.svg" />
+                </div>
+                <div class="login-text">
+                   <h4>Login into account</h4>
+                   <span>Use your credentials to access your account.</span>
+                </div>
+                <div class="input-field">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="email">
+                                <input type="email" placeholder="Email Address"  formControlName="username" class="form-control" aria-describedby="passwordHelpInline">
+                            </div>
+                        </div>
+                        <div class="col-md-12 mt-3">
+                            <div class="password">
+                                <input type="password" placeholder="Password"  formControlName="password" class="form-control" aria-describedby="passwordHelpInline">
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-12 mt-3">
-                        <div class="password">
-                            <input type="password" placeholder="Password" class="form-control" aria-describedby="passwordHelpInline">
-                        </div>
+                </div>
+                <div class="rember">
+                    <div>
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <span>Remember me</span>
+                    </div>
+                    <div>
+                        <h4>Forgot password?</h4>
                     </div>
                 </div>
-            </div>
-            <div class="rember">
-                <div>
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                    <span>Remember me</span>
-                </div>
-                <div>
-                    <h4>Forgot password?</h4>
-                </div>
-            </div>
-
-            <button>Login</button>
+    
+                <button>Login</button>
+            </form>
 
             <div class="login-with">
                 <span>or login with</span>

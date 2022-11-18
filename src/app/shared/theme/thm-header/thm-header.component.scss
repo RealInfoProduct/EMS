@@ -13,3 +13,17 @@
         font-size: 37px;
     }
 }
+
+.header-content{
+    display:flex ;
+    align-items: center;
+    justify-content: space-between;
+
+    .logout{
+        margin-right: 20px;
+        cursor: pointer;
+        i{
+            font-size: 37px;
+        }
+    }
+}

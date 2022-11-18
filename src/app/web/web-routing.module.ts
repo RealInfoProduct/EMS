@@ -5,14 +5,14 @@ import { BonusAttendanceComponent } from './bonus-attendance/bonus-attendance.co
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ReportComponent } from './report/report.component';
 import { WebMainComponent } from './web-main/web-main.component';
-// import { canActivate,redirectUnauthorizedTo} from '@angular/fire/auth-guard'
+import { canActivate,redirectUnauthorizedTo} from '@angular/fire/auth-guard'
 
-// const redirectLogin = () =>  redirectUnauthorizedTo(['login']);
+const redirectLogin = () =>  redirectUnauthorizedTo(['login']);
 
 const routes: Routes = [{
   path: '',
   component: WebMainComponent,
-  // ...canActivate(redirectLogin),
+  ...canActivate(redirectLogin),
 
 
   children: [
