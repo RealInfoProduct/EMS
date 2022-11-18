@@ -72,8 +72,9 @@ export class ThmHeaderComponent implements OnInit {
     })
   }
 
-  languageChange(){
-    this.translate.use()
+  languageChange(event:any){
+    debugger
+    this.translate.use(event.target.value)
   }
 
 }
