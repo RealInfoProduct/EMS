@@ -4,6 +4,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ThmHeaderComponent } from './theme/thm-header/thm-header.component';
 import { ThmMenubarComponent } from './theme/thm-menubar/thm-menubar.component';
 import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
+
 
 /**************** Prime-NG Content Import Here ******************/
 
@@ -54,6 +56,7 @@ const PRIME_NG = [
     FormsModule,
     ReactiveFormsModule,
     RouterModule,
+    HttpClientModule,
     PRIME_NG
   ],
   providers: [MessageService,PrimeNGConfig,ConfirmationService],
@@ -62,6 +65,7 @@ const PRIME_NG = [
     ReactiveFormsModule,
     ThmHeaderComponent,
     ThmMenubarComponent,
+    HttpClientModule,
     PRIME_NG
   ]
 })
