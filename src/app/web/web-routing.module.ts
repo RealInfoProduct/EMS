@@ -3,6 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { WebMainComponent } from './web-main/web-main.component';
 import { canActivate,redirectUnauthorizedTo} from '@angular/fire/auth-guard'
+import { AddEmployeeComponent } from './add-employee/add-employee.component';
+import { BonusAttendanceComponent } from './bonus-attendance/bonus-attendance.component';
+import { ReportComponent } from './report/report.component';
 
 const redirectLogin = () =>  redirectUnauthorizedTo(['login']);
 
@@ -22,18 +25,18 @@ const routes: Routes = [{
       path: 'dashboard',
       component: DashboardComponent
     },
-    // {
-    //   path: 'addemployee',
-    //   component: AddEmployeeComponent
-    // },
-    // {
-    //   path: 'bonusattendance',
-    //   component: BonusAttendanceComponent
-    // },
-    // {
-    //   path: 'report',
-    //   component: ReportComponent
-    // },
+    {
+      path: 'addemployee',
+      component: AddEmployeeComponent
+    },
+    {
+      path: 'bonusattendance',
+      component: BonusAttendanceComponent
+    },
+    {
+      path: 'report',
+      component: ReportComponent
+    },
   ]
 }];
 
