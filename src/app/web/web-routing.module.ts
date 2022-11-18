@@ -2,14 +2,14 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { WebMainComponent } from './web-main/web-main.component';
-// import { canActivate,redirectUnauthorizedTo} from '@angular/fire/auth-guard'
+import { canActivate,redirectUnauthorizedTo} from '@angular/fire/auth-guard'
 
-// const redirectLogin = () =>  redirectUnauthorizedTo(['login']);
+const redirectLogin = () =>  redirectUnauthorizedTo(['login']);
 
 const routes: Routes = [{
   path: '',
   component: WebMainComponent,
-  // ...canActivate(redirectLogin),
+  ...canActivate(redirectLogin),
 
 
   children: [
