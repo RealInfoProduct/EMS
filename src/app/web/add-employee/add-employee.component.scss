@@ -1,0 +1,39 @@
+@import '../../../scss/_common.scss';
+
+.add_employee_button{
+    button{
+        @include button;
+    }
+}
+.card {
+    margin-top: 0;
+    h5 {
+        text-align: center;
+        padding: 5px;
+    }
+}
+.add_button{
+    button{
+        @include button;
+        float: right;
+    }
+}
+
+.icon {
+    @include button_icon;
+}
+.export_button{
+    float: right;
+    display: flex;
+    align-items: center;
+    button{
+        @include button_icon;
+        padding: 6px 10px;
+    }
+}
+.record {
+    td {
+        width: 100%;
+        justify-content: center;
+    }
+}

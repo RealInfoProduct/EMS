@@ -1,2 +1,13 @@
 @import '../scss/_mixin.scss';
 @import '../scss/_variable.scss';
+
+
+
+.card {
+    margin-top: 10px;
+    padding: 15px;
+    border-radius: 15px;
+    background-color: $primary-color;
+    box-shadow: $box-shadow;
+    
+  }

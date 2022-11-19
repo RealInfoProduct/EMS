@@ -9,5 +9,23 @@
         "Report": "Report",
         "Settings": "Settings",
         "Logout": "LogOut"
+    },
+
+    "ATTENDANCE": {
+
+        "NO_RECDE_FOUND":"No Recode Found",
+        
+        "ADD_EMPLOYEE":{
+            "ADDEMPLOYEE": "Add Employee",
+            "EDIT_EMPLOYEE": "Edit Employee",
+            "SR_No": "Sr No",
+            "FIRST_NAME": "First Name",
+            "LAST_NAME": "Last Name",
+            "SALARY": "Salary",
+            "PHONENO": "PhoneNo",
+            "ACTION": "Action",
+            "SUBMIT":"Submit",
+            "UPDATE":"Update"
+        }
     }
 }

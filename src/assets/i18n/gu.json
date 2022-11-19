@@ -9,5 +9,23 @@
         "Report": "અહેવાલ",
         "Settings": "સેટિંગ્સ",
         "Logout": "લૉગ આઉટ"
+    },
+
+    "ATTENDANCE": {
+
+		"NO_RECDE_FOUND":"કોઈ રેકોડૅ મળ્યો નથી",
+
+		"ADD_EMPLOYEE":{
+			"ADDEMPLOYEE": "કારીગર",
+			"EDIT_EMPLOYEE": "અપડેટ કારીગર",
+			"SR_No": "નંબર",
+			"FIRST_NAME": "પ્રથમ નામ",
+			"LAST_NAME": "છેલ્લું નામ",
+			"SALARY": "પગાર",
+			"PHONENO": "ફોન નંબર",
+			"ACTION": "એક્સન",
+			"SUBMIT":"સબમિટ કરો",
+			"UPDATE":"અપડેટ"
+		}
     }
 }
