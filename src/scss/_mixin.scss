@@ -12,3 +12,30 @@
         color: #fff;
     }
 }
+@mixin button {
+    margin: 10px;
+    padding: 9px 25px;
+    font-size: 14px;
+    color: $primary-color;
+    letter-spacing: 0.6px;
+    border-radius: 6px;
+    margin-left: 30px;
+    background: linear-gradient(118deg, $second-color, $first-color);
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        box-shadow: 0 0 10px 1px $first-color;
+    }
+
+}
+@mixin button_icon {
+    font-weight: 400;
+    color: $primary-color;
+    letter-spacing: 0.6px;
+    border-radius: 6px;
+    background: linear-gradient(118deg, $second-color, $first-color);
+    transition: all 0.3s ease-in-out;
+    padding: 4px 10px;
+    margin-right: 15px;
+    font-size: 19px;
+}

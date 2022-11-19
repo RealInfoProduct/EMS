@@ -1,1 +1,111 @@
-<p>add-employee works!</p>
+<div class="add_employee_button">
+    <button type="button" (click)="employeeAdd()" class="btn btn-primary m-2" data-bs-toggle="modal"
+        data-bs-target="#EmployeeDataAdd">
+        {{'ATTENDANCE.ADD_EMPLOYEE.ADDEMPLOYEE' | translate}}
+    </button>
+</div>
+<!-- Modal Employee -->
+<div class="modal fade" id="EmployeeDataAdd" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel" *ngIf="!isEdit">{{'ATTENDANCE.ADD_EMPLOYEE.ADDEMPLOYEE'
+                    | translate}}</h5>
+                <h5 class="modal-title" id="staticBackdropLabel" *ngIf="isEdit">
+                    {{'ATTENDANCE.ADD_EMPLOYEE.EDIT_EMPLOYEE' | translate }}</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form [formGroup]="employeeForm">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="col-12 companyInfo m-2">
+                                <label>{{'ATTENDANCE.ADD_EMPLOYEE.FIRST_NAME' | translate }}</label><span
+                                    class="required">*</span>
+                                <input type="text" class="form-control" formControlName="firstname"
+                                    placeholder="{{'ATTENDANCE.ADD_EMPLOYEE.FIRST_NAME' | translate }}">
+                            </div>
+                            <div class="col-12 companyInfo m-2">
+                                <label>{{'ATTENDANCE.ADD_EMPLOYEE.LAST_NAME' | translate }}</label>
+                                <input type="text" class="form-control" formControlName="lastname"
+                                    placeholder="{{'ATTENDANCE.ADD_EMPLOYEE.LAST_NAME' | translate }}">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="col-12 companyInfo m-2">
+                                <label>{{'ATTENDANCE.ADD_EMPLOYEE.SALARY' | translate }}</label><span
+                                    class="required">*</span>
+                                <input type="number" class="form-control" formControlName="salary"
+                                    placeholder="{{'ATTENDANCE.ADD_EMPLOYEE.SALARY' | translate }}">
+                            </div>
+                            <div class="col-12 companyInfo m-2">
+                                <label>{{'ATTENDANCE.ADD_EMPLOYEE.PHONENO' | translate }}</label>
+                                <input type="number" class="form-control" formControlName="phonenumber"
+                                    placeholder="{{'ATTENDANCE.ADD_EMPLOYEE.PHONENO' | translate }}">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="add_button">
+                        <button data-bs-dismiss="modal" aria-label="Close" *ngIf="!isEdit" type="submit"
+                            (click)="submit()" [disabled]="employeeForm.invalid"
+                            class="btn btn-secondary">{{'ATTENDANCE.ADD_EMPLOYEE.SUBMIT' | translate }}</button>
+                        <button data-bs-dismiss="modal" aria-label="Close" *ngIf="isEdit" type="submit"
+                            (click)="submit()" [disabled]="employeeForm.invalid"
+                            class="btn btn-secondary">{{'ATTENDANCE.ADD_EMPLOYEE.UPDATE' | translate }}</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="row">
+        <div class="col-12">
+            <p-table [value]="employeeList" [paginator]="true" [rows]="25"
+                [showCurrentPageReport]="true" [scrollable]="true" [scrollHeight]="height"
+                scrollDirection="both" responsiveLayout="scroll" [style]="{'margin-top': '8px'}"
+                currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+                [rowsPerPageOptions]="[10,25,50]">
+                <ng-template pTemplate="header">
+                    <tr>
+                        <th style="width: 10%;">{{'ATTENDANCE.ADD_EMPLOYEE.SR_No' | translate }}</th>
+                        <th width="25%" [pSortableColumn]="'firstname'">{{'ATTENDANCE.ADD_EMPLOYEE.FIRST_NAME' | translate }}<p-sortIcon
+                            [field]="'firstname'"></p-sortIcon>
+                    </th>
+                        <th style="width: 20%">{{'ATTENDANCE.ADD_EMPLOYEE.LAST_NAME' | translate }}</th>
+                        <th style="width: 15%">{{'ATTENDANCE.ADD_EMPLOYEE.SALARY' | translate }}</th>
+                        <th style="width: 20%">{{'ATTENDANCE.ADD_EMPLOYEE.PHONENO' | translate }}</th>
+                        <th style="width: 10%">{{'ATTENDANCE.ADD_EMPLOYEE.ACTION' | translate }}</th>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-item let-i="rowIndex">
+                    <tr>
+                        <td style="width: 10%;">{{i+1}}</td>
+                        <td style="width: 25%">{{item.firstname}}</td>
+                        <td style="width: 20%">{{item.lastname}}</td>
+                        <td style="width: 15%">{{item.salary}}</td>
+                        <td style="width: 20%">{{item.phonenumber}}</td>
+                        <td style="width: 10%">
+                            <!-- <div class="icon" data-bs-toggle="modal"
+                                data-bs-target="#EmployeeDataAdd" (click)="editEmployeeData(item)">
+                                <i class="fa fa-pencil" aria-hidden="true"></i>
+                            </div>
+                            <div class="icon" (click)="deleteEmployeeData(item)">
+                                <i class="fa fa-trash" aria-hidden="true"></i>
+                            </div> -->
+                        </td>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="emptymessage">
+                    <tr class="record">
+                        <td colspan="12" class="p-text-center p-p-3">{{'ATTENDANCE.NO_RECDE_FOUND' | translate }}</td>
+                    </tr>
+                </ng-template>
+            </p-table>
+        </div>
+    </div>
+</div>
