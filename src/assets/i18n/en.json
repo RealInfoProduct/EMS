@@ -1,8 +1,13 @@
 {
+    "LANGUAGE.ENGLISH": "English",
+    "LANGUAGE.GUJRATI": "Gujrati",
+    
     "MENUBAR": {
-        "LANGUAGE.ENGLISH": "English",
-        "LANGUAGE.GUJRATI": "Gujrati",
-        "DASHBOARD": "Dashboard"
+        "DASHBOARD": "Dashboard",
+        "Add_Employee": "Add Employee",
+        "Bonus_Attendance": "Bonus & Attendance",
+        "Report": "Report",
+        "Settings": "Settings",
+        "Logout": "LogOut"
     }
-
 }

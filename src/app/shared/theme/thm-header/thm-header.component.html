@@ -8,8 +8,8 @@
     <div class="logout_language_content">
         <div class="language">
             <select class="form-select"(change)="languageChange($event)" aria-label="Default select example">
-                <option value="en">English</option>
-                <option value="gu">Gujrati</option>
+                <option value="en">{{'LANGUAGE.ENGLISH' | translate}}</option>
+                <option value="gu">{{'LANGUAGE.GUJRATI' | translate}}</option>
               </select>
         </div>
         <div class="logout" (click)="logOut()">

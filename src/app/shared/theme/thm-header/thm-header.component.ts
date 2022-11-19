@@ -19,6 +19,7 @@ export class ThmHeaderComponent implements OnInit {
 
   constructor(private firebaseService:FirebaseService,private router:Router,private translate: TranslateService) { 
     translate.setDefaultLang('en')
+    
   }
 
   //  this one use for a handle click and double click on one icon

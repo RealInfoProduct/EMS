@@ -1,0 +1,13 @@
+{
+    "LANGUAGE.ENGLISH": "અંગ્રેજી",
+    "LANGUAGE.GUJRATI": "ગુજરાતી",
+    
+    "MENUBAR": {
+        "DASHBOARD": "ડેશબોર્ડ",
+        "Add_Employee": "કર્મચારી ઉમેરો",
+        "Bonus_Attendance": "બોનસ અને હાજરી",
+        "Report": "અહેવાલ",
+        "Settings": "સેટિંગ્સ",
+        "Logout": "લૉગ આઉટ"
+    }
+}
