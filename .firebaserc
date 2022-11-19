@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "emoloyee-managemenet-system"
-  }
+    "default": "emoloyee-managemenet-system",
+    "dev": "ems-dev1"
+  },
+  "targets": {}
 }
