@@ -26,7 +26,7 @@ export class AddEmployeeComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
-    this.height = window.innerHeight - 278 + 'px'  
+    this.height = window.innerHeight - 279 + 'px'  
     this.employeeFormBuilder();
     this.getAllDataInNgOnInit();
   }
