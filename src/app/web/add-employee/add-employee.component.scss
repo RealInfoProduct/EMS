@@ -3,6 +3,7 @@
 .add_employee_button{
     button{
         @include button;
+        // float: right;
     }
 }
 .card {
@@ -18,7 +19,6 @@
         float: right;
     }
 }
-
 .icon {
     @include button_icon;
 }
