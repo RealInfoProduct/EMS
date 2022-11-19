@@ -7,6 +7,8 @@ import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 
 
+
+
 /**************** Prime-NG Content Import Here ******************/
 
 import { ToastModule } from 'primeng/toast';
@@ -25,6 +27,7 @@ import {SelectButtonModule} from 'primeng/selectbutton';
 import {ProgressBarModule} from 'primeng/progressbar'
 import {InputSwitchModule} from 'primeng/inputswitch';
 import { TranslateModule } from '@ngx-translate/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 const PRIME_NG = [
@@ -69,6 +72,7 @@ const PRIME_NG = [
     ThmMenubarComponent,
     HttpClientModule,
     TranslateModule,
+    // BrowserAnimationsModule,
     PRIME_NG
   ]
 })
