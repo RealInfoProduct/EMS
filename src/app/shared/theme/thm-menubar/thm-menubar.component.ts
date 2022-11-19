@@ -1,4 +1,5 @@
 import { Component, OnInit,Input } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import { MenuItem } from 'primeng/api';
 
 
@@ -8,9 +9,11 @@ import { MenuItem } from 'primeng/api';
   styleUrls: ['./thm-menubar.component.scss']
 })
 export class ThmMenubarComponent implements OnInit {
-
+  
   // @Input() sideNavStatus: boolean = false
   // @Input() sideNavStatusClose: boolean = false
+  constructor(private translate:TranslateService) { }
+
   
   items!: MenuItem[]
   list:any =[
@@ -47,7 +50,6 @@ export class ThmMenubarComponent implements OnInit {
     
   ]
 
-  constructor() { }
 
   ngOnInit(): void {
 }

@@ -8,7 +8,12 @@ import { SharedModule } from '../shared/shared.module';
 import { AddEmployeeComponent } from './add-employee/add-employee.component';
 import { BonusAttendanceComponent } from './bonus-attendance/bonus-attendance.component';
 import { ReportComponent } from './report/report.component';
-
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpClient } from '@angular/common/http';
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
 
 
 @NgModule({
@@ -24,6 +29,14 @@ import { ReportComponent } from './report/report.component';
     CommonModule,
     WebRoutingModule,
     SharedModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    }),
+    
   ]
 })
 export class WebModule { }

@@ -24,6 +24,7 @@ import { AutoCompleteModule } from 'primeng/autocomplete';
 import {SelectButtonModule} from 'primeng/selectbutton';
 import {ProgressBarModule} from 'primeng/progressbar'
 import {InputSwitchModule} from 'primeng/inputswitch';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 const PRIME_NG = [
@@ -57,6 +58,7 @@ const PRIME_NG = [
     ReactiveFormsModule,
     RouterModule,
     HttpClientModule,
+    TranslateModule,
     PRIME_NG
   ],
   providers: [MessageService,PrimeNGConfig,ConfirmationService],
@@ -66,6 +68,7 @@ const PRIME_NG = [
     ThmHeaderComponent,
     ThmMenubarComponent,
     HttpClientModule,
+    TranslateModule,
     PRIME_NG
   ]
 })

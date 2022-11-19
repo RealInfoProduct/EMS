@@ -73,7 +73,6 @@ export class ThmHeaderComponent implements OnInit {
   }
 
   languageChange(event:any){
-    debugger
     this.translate.use(event.target.value)
   }
 
