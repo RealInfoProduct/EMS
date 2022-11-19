@@ -14,7 +14,7 @@ export class AddEmployeeComponent implements OnInit {
   constructor(private fb: FormBuilder,) { }
 
   ngOnInit(): void {
-    this.height = window.innerHeight - 263 + 'px'  
+    this.height = window.innerHeight - 278 + 'px'  
     this.employeeFormBuilder();
   }
 

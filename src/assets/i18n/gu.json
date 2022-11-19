@@ -1,21 +1,19 @@
 {
-    "LANGUAGE.ENGLISH": "અંગ્રેજી",
-    "LANGUAGE.GUJRATI": "ગુજરાતી",
-    
-    "MENUBAR": {
-        "DASHBOARD": "ડેશબોર્ડ",
-        "Add_Employee": "કર્મચારી ઉમેરો",
-        "Bonus_Attendance": "બોનસ અને હાજરી",
-        "Report": "અહેવાલ",
-        "Settings": "સેટિંગ્સ",
-        "Logout": "લૉગ આઉટ"
-    },
+	"LANGUAGE.ENGLISH": "અંગ્રેજી",
+	"LANGUAGE.GUJRATI": "ગુજરાતી",
 
-    "ATTENDANCE": {
+	"MENUBAR": {
+		"DASHBOARD": "ડેશબોર્ડ",
+		"Add_Employee": "કર્મચારી ઉમેરો",
+		"Bonus_Attendance": "બોનસ અને હાજરી",
+		"Report": "અહેવાલ",
+		"Settings": "સેટિંગ્સ",
+		"Logout": "લૉગ આઉટ"
+	},
 
-		"NO_RECDE_FOUND":"કોઈ રેકોડૅ મળ્યો નથી",
-
-		"ADD_EMPLOYEE":{
+	"ATTENDANCE": {
+		"NO_RECDE_FOUND": "કોઈ રેકોડૅ મળ્યો નથી",
+		"ADD_EMPLOYEE": {
 			"ADDEMPLOYEE": "કારીગર",
 			"EDIT_EMPLOYEE": "અપડેટ કારીગર",
 			"SR_No": "નંબર",
@@ -24,8 +22,26 @@
 			"SALARY": "પગાર",
 			"PHONENO": "ફોન નંબર",
 			"ACTION": "એક્સન",
-			"SUBMIT":"સબમિટ કરો",
-			"UPDATE":"અપડેટ"
+			"SUBMIT": "સબમિટ કરો",
+			"UPDATE": "અપડેટ"
 		}
-    }
+	},
+
+	"COMMON_MESSAGE": {
+		"loginFdetail": "લૉગિન વિગતો અમાન્ય..",
+		"loginSdetail": "લૉગિન સફળ...",
+		"SubmitData": "ડેટા સફળતાપૂર્વક ઉમેરાયો..",
+		"Filledrequired": "કૃપા કરીને તમામ ફરજિયાત વિગતો ભરો..",
+		"UpdateData": "ડેટા સફળતાપૂર્વક અપડેટ થય ગયો.. ",
+		"DeletedData": "ડેટા સફળતાપૂર્વક કાઢી નાખ્યો..",
+		"DeleteHeader": "કાઢી નાખો",
+		"DeleteAlertL": "શું તમે આ રેકોર્ડ કાઢી નાખવા માંગો છો ?"
+	},
+	
+	"MSGTITLE": {
+		"SUCCESS": "સફળતા",
+		"INFO": "માહિતી",
+		"WARNING": "ચેતવણી",
+		"ERROR": "ભૂલ"
+	}
 }

@@ -1,10 +1,14 @@
 @import '../../../scss/_common.scss';
 
 .add_employee_button{
-    button{
-        @include button;
-        // float: right;
-    }
+
+        display: flex;
+        justify-content: end;
+    
+        button {
+            @include button;
+        }
+
 }
 .card {
     margin-top: 0;

@@ -12,10 +12,8 @@
     },
 
     "ATTENDANCE": {
-
-        "NO_RECDE_FOUND":"No Recode Found",
-        
-        "ADD_EMPLOYEE":{
+        "NO_RECDE_FOUND": "No Recode Found",
+        "ADD_EMPLOYEE": {
             "ADDEMPLOYEE": "Add Employee",
             "EDIT_EMPLOYEE": "Edit Employee",
             "SR_No": "Sr No",
@@ -24,8 +22,26 @@
             "SALARY": "Salary",
             "PHONENO": "PhoneNo",
             "ACTION": "Action",
-            "SUBMIT":"Submit",
-            "UPDATE":"Update"
+            "SUBMIT": "Submit",
+            "UPDATE": "Update"
         }
+    },
+
+    "MSGTITLE": {
+        "SUCCESS": "success",
+        "INFO": "Info",
+        "WARNING": "Waning",
+        "ERROR": "error"
+    },
+
+    "COMMON_MESSAGE": {
+        "loginFdetail": "Login Details Invalid..",
+        "loginSdetail": "Login Successfull...",
+        "SubmitData": "Data Added Succesfully",
+        "Filledrequired": "Please Filled All Mandatory Fields..",
+        "UpdateData": "Data Update Successfully",
+        "DeletedData": "Data Deleted Successfully",
+        "DeleteHeader": "Delete Priority",
+        "DeleteAlertL": "Do you want to delete this record ?"
     }
 }
