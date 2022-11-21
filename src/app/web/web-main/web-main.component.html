@@ -9,6 +9,7 @@
             <!-- [sideNavStatus]="sideNavStatus"    [ngClass]="{'app-side-nav-close' : sideNavStatusClose}"-->
         </app-thm-menubar>
         <div class="display-area p-3" [ngClass]="{'display-area-shrink' : sideNavStatus}" [ngClass]="{'display-area-shrink-close' : sideNavStatusClose}">
+            <p-toast></p-toast>
             <router-outlet></router-outlet>
         </div>
     </main>
