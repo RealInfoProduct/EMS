@@ -1,12 +1,12 @@
 <div class="container-fluid">
-    <div *ngIf="error" class="alert alert-danger" role="alert">
-        <strong>An Error Occurred</strong> {{error}}
-      </div>
-    <div *ngIf="success" class="alert alert-success" role="alert">
-        <strong>An Success:</strong> {{success}}
-      </div>
     <div class="container">
         <div class="login">
+            <div *ngIf="error" class="alert alert-danger" role="alert">
+                <strong>An Error Occurred</strong> {{error}}
+              </div>
+            <div *ngIf="success" class="alert alert-success" role="alert">
+                <strong>An Success:</strong> {{success}}
+              </div>
             <form action="" [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
                 <div class="logo">
                     <img src="../../../assets/img/logo-03.svg" />

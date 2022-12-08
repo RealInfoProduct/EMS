@@ -13,13 +13,14 @@ import { RegisterComponent } from './pages/register/register.component'
 import { provideFirebaseApp,initializeApp} from '@angular/fire/app'
 import { getFirestore,provideFirestore} from '@angular/fire/firestore';
 import { environment } from 'src/environments/environment'
+import { AuthInterceptor } from './auth/auth.interceptor';
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { AngularFireModule } from '@angular/fire/compat';
 // translation use 
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { HttpClient, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { AuthInterceptor } from './auth/auth.interceptor';
+import { SpinnerComponent } from './pages/spinner/spinner.component';
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http); 
 }
@@ -29,6 +30,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     AppComponent,
     LoginComponent,
     RegisterComponent,
+    SpinnerComponent,
   ],
   imports: [
     BrowserModule,

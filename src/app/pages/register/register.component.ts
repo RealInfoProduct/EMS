@@ -42,11 +42,12 @@ export class RegisterComponent implements OnInit {
     let authObservable: Observable<AuthResponse>;
     this.authService.signUp(email, password).subscribe(
       (res) => {
-        this.success = `Your Email: ${res.email} Register Successfully.. Go to Loginpage...`
+        this.success = `Your Email: ${res.email} Register Successfully.. Go to Loginpage...`;
+        setTimeout(() => { this.success = undefined }, 9000);
       },
       err => {
-        console.log('ERROR===>', err);
         this.error =  err.error.error.message
+        setTimeout(() => { this.error = undefined }, 6000);
       })
   }
 

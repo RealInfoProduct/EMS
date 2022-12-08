@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Auth } from '@angular/fire/auth';
-import { from } from 'rxjs';
-import {  signInWithEmailAndPassword } from 'firebase/auth';
+// import { Auth } from '@angular/fire/auth';
+// import { from } from 'rxjs';
+// import {  signInWithEmailAndPassword } from 'firebase/auth';
 import { addDoc, collectionData, deleteDoc, doc,Firestore, query, setDoc, updateDoc , where} from '@angular/fire/firestore';
 import {  Employee, EmployeeBonus, EmployeeAbsent, EmployeeWithdrawal,  MachineList,  } from '../interfaces/interface';
 import { collection } from '@firebase/firestore';
@@ -11,14 +11,14 @@ import { collection } from '@firebase/firestore';
 })
 export class FirebaseService {
 
-  constructor(private authentication: Auth,private fService:Firestore ) { }
+  constructor(private fService:Firestore ) { }
 
 
    /////////////////////// Authentication ////////////////////////
 
-   login(username : string, password: string){
-    return from(signInWithEmailAndPassword(this.authentication,username,password));
-  }
+  //  login(username : string, password: string){
+  //   return from(signInWithEmailAndPassword(this.authentication,username,password));
+  // }
   
   // logout(){
   //   return from(this.authentication.signOut());
