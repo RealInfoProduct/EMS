@@ -1,69 +1,7 @@
-<!-- <section class="login_section">
-    <div class="container">
-        <div class="login-page">
-            <div class="col-10">
-                <div class="card">
-                    <div class="login-content">
-                        <div class="col-md-6 col-lg-5">
-                            <img src="../../../assets/timesheet login.png" class="img-fluid" />
-                        </div>
-                        <div class="col-md-6 col-lg-7">
-                            <div class="login-body">
-
-                                <form [formGroup]="loginForm">
-
-                                    <div class="mb-3 header-label">
-                                        <span> Logo </span>
-                                    </div>
-
-                                    <div class="mb-3 signin-label">
-                                        <span>Sign into your account</span>
-                                    </div>
-
-                                    <div class="mb-3">
-                                        <input type="email" class="form-control form-control-lg"
-                                            formControlName="username" />
-                                        <label class="form-label pt-1">Email address</label>
-                                    </div>
-
-                                    <div class="mb-3 password">
-                                        <input [type]="showPassword ? 'text' : 'password'" class="form-control form-control-lg"
-                                            formControlName="password" />
-                                            <div class="icon">
-                                                <i class="fa fa-eye " (click)="showPassword = !showPassword"
-                                                    [class.hide]="showPassword"></i>
-                                                <i class="fa fa-eye-slash " (click)="showPassword = !showPassword"
-                                                    [class.hide]="!showPassword"></i>
-                                            </div>
-                                        <label class="form-label pt-1">Password</label>
-                                    </div>
-
-                                    <div class="mb-4">
-                                        <button class="btn btn-dark btn-lg" type="submit">Login</button>
-                                    </div>
-
-                                    <div class="forgot-password">
-                                        <a href="#!">Forgot password?</a>
-                                        <a href="#!" class="small text-muted">Terms of use.</a>
-                                    </div>
-                                </form>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section> -->
-
-
-
-
 <div class="container-fluid">
     <div *ngIf="error" class="alert alert-danger" role="alert">
         <strong>An Error Occurred</strong> {{error}}
-      </div>
+    </div>
     <div class="container">
         <div class="login">
             <form action="" [formGroup]="loginForm" (ngSubmit)="submit()">
@@ -94,7 +32,7 @@
                         <span>Remember me</span>
                     </div>
                     <div>
-                        <h4>Forgot password?</h4>
+                        <h4 (click)="forgotpassword()">Forgot password?</h4>
                     </div>
                 </div>
     

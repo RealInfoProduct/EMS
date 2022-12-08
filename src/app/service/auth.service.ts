@@ -79,5 +79,12 @@ export class AuthService {
     this.user.next(user);
     localStorage.setItem('UserData',JSON.stringify(user) )
   } 
+
+  forgotPassword(data:any){
+    return  this.http.post<any>('https://identitytoolkit.googleapis.com/v1/accounts:sendOobCode?key=AIzaSyBSds_wz0u_EeCEstGcDa0RsUDxEvhGkds',{
+      requestType:'PASSWORD_RESET',
+      email:data
+    })
+  }
   
 }

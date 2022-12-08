@@ -2,10 +2,9 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
-import { canActivate,redirectLoggedInTo} from '@angular/fire/auth-guard'
 import { AuthGuard } from './auth/auth.guard';
+import { ForgotpasswordComponent } from './pages/forgotpassword/forgotpassword.component';
 
-// const redirectDashboard = () =>  redirectLoggedInTo(['web']);
 
 const routes: Routes = [
   {
@@ -16,12 +15,14 @@ const routes: Routes = [
   {
     path:'login',
     component:LoginComponent,
-    // ...canActivate(redirectDashboard)
   },
   {
     path:'register',
     component:RegisterComponent,
-    // ...canActivate(redirectDashboard)
+  },
+  {
+    path:'forgotpassword',
+    component:ForgotpasswordComponent,
   },
   // {
   //   path:'**',

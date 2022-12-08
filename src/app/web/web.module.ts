@@ -11,6 +11,7 @@ import { ReportComponent } from './report/report.component';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient } from '@angular/common/http';
+import { ForgotpasswordComponent } from '../pages/forgotpassword/forgotpassword.component';
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
 }
@@ -23,6 +24,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     AddEmployeeComponent,
     BonusAttendanceComponent,
     ReportComponent,
+    ForgotpasswordComponent
     
   ],
   imports: [
