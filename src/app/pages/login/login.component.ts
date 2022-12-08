@@ -82,14 +82,10 @@ export class LoginComponent implements OnInit {
 
     this.authService.signIn(email,password).subscribe(
       (res) =>{
-        console.log('RES==>' ,res);
         this.router.navigate(['web/dashboard'])
       },
         err => {
-          console.log(err.error.error.message,'===========>');
-          
         this.error = err.error.error.message
-        
       })
   }
 

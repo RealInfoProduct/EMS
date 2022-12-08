@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { canActivate,redirectLoggedInTo} from '@angular/fire/auth-guard'
+import { AuthGuard } from './auth/auth.guard';
 
 // const redirectDashboard = () =>  redirectLoggedInTo(['web']);
 
@@ -28,6 +29,7 @@ const routes: Routes = [
   // },
   {
     path: 'web',
+    canActivate:[AuthGuard],
     loadChildren: () => import('./web/web.module').then(m => m.WebModule)
   }
 ];

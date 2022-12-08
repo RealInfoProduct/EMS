@@ -33,10 +33,6 @@ export class AddEmployeeComponent implements OnInit {
     this.height = window.innerHeight - 279 + 'px'  
     this.employeeFormBuilder();
     this.getAllDataInNgOnInit();
-    if(sessionStorage.getItem('isAuthenticate') === null) {
-      this.router.navigate(['/login'])
-    }
-    
   }
 
   employeeFormBuilder(): void {
