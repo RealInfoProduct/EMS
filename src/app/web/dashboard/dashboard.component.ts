@@ -16,10 +16,5 @@ export class DashboardComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  // logOut(): void{
-  //   localStorage.clear();
-  //   this.firebaseService.logout().subscribe(()=>{
-  //     this.router.navigate(['/login'])
-  //   })
-  // }
+ 
 }

@@ -6,13 +6,15 @@ import { canActivate,redirectUnauthorizedTo} from '@angular/fire/auth-guard'
 import { AddEmployeeComponent } from './add-employee/add-employee.component';
 import { BonusAttendanceComponent } from './bonus-attendance/bonus-attendance.component';
 import { ReportComponent } from './report/report.component';
+import { AuthGuard } from '../auth/auth.guard';
 
-const redirectLogin = () =>  redirectUnauthorizedTo(['login']);
+
+// const redirectLogin = () =>  redirectUnauthorizedTo(['login']);
 
 const routes: Routes = [{
   path: '',
   component: WebMainComponent,
-  ...canActivate(redirectLogin),
+  // ...canActivate(redirectLogin),
 
 
   children: [
@@ -23,6 +25,7 @@ const routes: Routes = [{
     },
     {
       path: 'dashboard',
+      canActivate:[AuthGuard],
       component: DashboardComponent
     },
     {

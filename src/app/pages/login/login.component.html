@@ -58,7 +58,12 @@
 </section> -->
 
 
+
+
 <div class="container-fluid">
+    <div *ngIf="error" class="alert alert-danger" role="alert">
+        <strong>An Error Occurred</strong> {{error}}
+      </div>
     <div class="container">
         <div class="login">
             <form action="" [formGroup]="loginForm" (ngSubmit)="submit()">

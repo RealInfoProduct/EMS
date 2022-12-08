@@ -2,6 +2,7 @@ import { Component, EventEmitter, HostListener, OnInit, Output } from '@angular/
 import { Router } from '@angular/router';
 import { FirebaseService } from 'src/app/service/firebase.service';
 import { TranslateService } from '@ngx-translate/core';
+import { AuthService } from 'src/app/service/auth.service';
 
 @Component({
   selector: 'app-thm-header',
@@ -15,9 +16,13 @@ export class ThmHeaderComponent implements OnInit {
 
   menuStatus: boolean = false
   menuStatusClose: boolean = true
+
  
 
-  constructor(private firebaseService:FirebaseService,private router:Router,private translate: TranslateService) { 
+  constructor(private firebaseService:FirebaseService,
+                      private router:Router,
+                      private translate: TranslateService,
+                      private authService:AuthService) { 
     translate.setDefaultLang('en')
     
   }
@@ -66,12 +71,17 @@ export class ThmHeaderComponent implements OnInit {
   //   console.log('in Doubled clicked' , event);
   // }
 
-  logOut(): void{
-    localStorage.clear();
-    this.firebaseService.logout().subscribe(()=>{
-      this.router.navigate(['/login'])
-    })
+  // logOut(): void{
+  //   localStorage.clear();
+  //   this.firebaseService.logout().subscribe(()=>{
+  //     this.router.navigate(['/login'])
+  //   })
+  // }
+
+  logOut(){
+    this.authService.signOut()
   }
+  
 
   languageChange(event:any){
     this.translate.use(event.target.value)

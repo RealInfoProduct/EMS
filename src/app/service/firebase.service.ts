@@ -20,9 +20,9 @@ export class FirebaseService {
     return from(signInWithEmailAndPassword(this.authentication,username,password));
   }
   
-  logout(){
-    return from(this.authentication.signOut());
-  }
+  // logout(){
+  //   return from(this.authentication.signOut());
+  // }
 
     /////////////////////// Employee Data ////////////////////////
 

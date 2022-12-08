@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { ConfirmationService, MessageService } from 'primeng/api';
 import { Employee } from 'src/app/interfaces/interface';
+import { AuthService } from 'src/app/service/auth.service';
 import { FirebaseService } from 'src/app/service/firebase.service';
 import { msgType } from 'src/assets/Constant/message-constant';
 @Component({
@@ -22,13 +24,19 @@ export class AddEmployeeComponent implements OnInit {
               private firebaseService:FirebaseService,
               private messageService: MessageService,
               private confirmationService: ConfirmationService,
-              private translate: TranslateService
+              private translate: TranslateService,
+              private router:Router,
+              private authService:AuthService
     ) { }
 
   ngOnInit(): void {
     this.height = window.innerHeight - 279 + 'px'  
     this.employeeFormBuilder();
     this.getAllDataInNgOnInit();
+    if(sessionStorage.getItem('isAuthenticate') === null) {
+      this.router.navigate(['/login'])
+    }
+    
   }
 
   employeeFormBuilder(): void {
@@ -114,5 +122,14 @@ export class AddEmployeeComponent implements OnInit {
         this.isLoader = false;
   })
 }
+
+ logOut(): void{
+    localStorage.clear();
+    this.authService.signOut()
+
+    // this.firebaseService.logout().subscribe(()=>{
+    //   this.router.navigate(['/login'])
+    // })
+  }
 
 }
