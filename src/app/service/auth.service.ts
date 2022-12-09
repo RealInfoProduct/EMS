@@ -12,7 +12,7 @@ import { User } from '../model/user.model';
 export class AuthService {
 
   user = new BehaviorSubject<User> (null);
- private tokenExpirationTimer:any
+//  private tokenExpirationTimer:any
 
   constructor(private http:HttpClient, private router:Router) { }
 
@@ -45,18 +45,18 @@ export class AuthService {
     this.user.next(null)
     this.router.navigate(['/login']);
     localStorage.removeItem('UserData')
-    if(this.tokenExpirationTimer){
-      clearTimeout(this.tokenExpirationTimer);
-    }
+    // if(this.tokenExpirationTimer){
+    //   clearTimeout(this.tokenExpirationTimer);
+    // }
 
-    this.tokenExpirationTimer = null
+    // this.tokenExpirationTimer = null
   }
 
-  autoSignOut(expirationDuration:any){
-    this.tokenExpirationTimer =  setTimeout(() => {
-        this.signOut();
-    }, expirationDuration);
-  }
+  // autoSignOut(expirationDuration:any){
+  //   this.tokenExpirationTimer =  setTimeout(() => {
+  //       this.signOut();
+  //   }, expirationDuration);
+  // }
 
   autoSignIn(){
     const userDataList = localStorage.getItem('UserData');
@@ -68,14 +68,14 @@ export class AuthService {
     if(loggedInUser.token){
       this.user.next(loggedInUser);
       const expirationDuration = new Date(userData._tokenExpirationDate).getTime() - new Date().getTime()
-      this.autoSignOut(expirationDuration)
+      // this.autoSignOut(expirationDuration)
     }
   }
 
   private authenticatedUser(email:any,userId:any,token:any,expiredIn:any){
     const expirationDate = new Date(new Date().getTime() + expiredIn*100);
     const user =  new User(email,userId,token,expirationDate)
-    this.autoSignOut(expiredIn*1000)    
+    // this.autoSignOut(expiredIn*1000)    
     this.user.next(user);
     localStorage.setItem('UserData',JSON.stringify(user) )
   } 

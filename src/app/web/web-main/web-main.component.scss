@@ -6,14 +6,15 @@ app-thm-header {
     height: 4rem;
     z-index: 2;
     background: #fff;
-    transition: left 450ms linear;
+    // transition: left 450ms linear;
+    transition: left 450ms linear, width 450ms linear;
     border-bottom: 1px solid #e8e8ed;
 }
 
 .theam-header-open{
     width: calc(100% - 300px);
     left: 300px;
-    transition: left 450ms linear;
+    // transition: left 450ms linear;
 }
 
 .theam-header-close{
