@@ -37,13 +37,13 @@ export class ForgotpasswordComponent implements OnInit {
   submit(){
     this.authService.forgotPassword(this.forgotPasswordForm.value.email).subscribe(
       (res)=>{
+      this.error = undefined
       this.success = true
       this.forgotPasswordForm.reset()
     },
     (err)=>{
       this.error = err.error.error.message
-      console.log(this.error);
-      
+      setTimeout(() => { this.error = undefined }, 6000);
     })
     
   }

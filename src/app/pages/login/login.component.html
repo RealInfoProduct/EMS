@@ -1,9 +1,10 @@
 <div class="container-fluid">
-    <div *ngIf="error" class="alert alert-danger" role="alert">
-        <strong>An Error Occurred</strong> {{error}}
-    </div>
+
     <div class="container">
         <div class="login">
+            <div *ngIf="error" class="alert alert-danger" role="alert">
+                <strong>An Error Occurred</strong> {{error}}
+            </div>
             <form action="" [formGroup]="loginForm" (ngSubmit)="submit()">
                 <div class="logo">
                     <img src="../../../assets/img/logo-03.svg" />
