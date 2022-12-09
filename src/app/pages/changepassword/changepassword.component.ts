@@ -29,6 +29,7 @@ export function ConfirmPasswordValidator(controlName: string, matchingControlNam
 export class ChangepasswordComponent implements OnInit {
   success:boolean = false
   error
+  token:any
 
   changePasswordForm!: FormGroup;
   constructor(private formBuilder: FormBuilder,
@@ -37,6 +38,8 @@ export class ChangepasswordComponent implements OnInit {
 
     ngOnInit(): void {
       this.buildForm()
+      const userDataList = localStorage.getItem('UserData');
+      this.token = JSON.parse(userDataList)._token
     }
   
     
@@ -52,10 +55,23 @@ export class ChangepasswordComponent implements OnInit {
   
   
     submit(){
-      console.log(this.changePasswordForm.value);
-      
-      
+      const payload = {
+        idToken:this.token,
+        password:this.changePasswordForm.value.password
+      }
+
+      this.authService.changePassword(payload).subscribe(
+        (res) =>{
+          this.success = true
+          setTimeout(() => { this.router.navigate(['/login']) }, 3000);
+        },
+        (err)=>{
+          this.error = err.error.error.message
+          setTimeout(() => { this.error = undefined }, 5000);
+
+        })
     }
+    
     navigateToLogin(){
       this.router.navigate(['/login'])
     }
