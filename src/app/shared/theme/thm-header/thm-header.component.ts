@@ -16,6 +16,10 @@ export class ThmHeaderComponent implements OnInit {
 
   menuStatus: boolean = false
   menuStatusClose: boolean = true
+  language = [
+    {value : 'en'},
+    {value : 'gu'},
+]
 
  
 
@@ -84,7 +88,7 @@ export class ThmHeaderComponent implements OnInit {
   
 
   languageChange(event:any){
-    this.translate.use(event.target.value)
+    this.translate.use(event.attributes.value.value)
   }
 
 }

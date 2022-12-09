@@ -6,14 +6,23 @@
         <i class="fa fa-bars" aria-hidden="true"></i>
     </div>
     <div class="logout_language_content">
-        <div class="language">
-            <select class="form-select"(change)="languageChange($event)" aria-label="Default select example">
-                <option value="en">{{'LANGUAGE.ENGLISH' | translate}}</option>
-                <option value="gu">{{'LANGUAGE.GUJRATI' | translate}}</option>
-              </select>
+        <div class="logout">
+            <i class="fa fa-language nav-item dropdown" id="navbarDropdownMenuLink" data-bs-toggle="dropdown"
+                aria-hidden="true" ></i>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" (click)="languageChange($event.target)" >
+                <a class="dropdown-item" value="en">{{'LANGUAGE.ENGLISH' | translate}}</a>
+                <a class="dropdown-item" value="gu">{{'LANGUAGE.GUJRATI' | translate}}</a>
+            </div>
         </div>
-        <div class="logout" (click)="logOut()">
-            <i class="fa fa-sign-out" aria-hidden="true"></i>
+        <div class="logout">
+            <i class="fa fa-user-circle-o nav-item dropdown" id="navbarDropdownMenuLink" data-bs-toggle="dropdown"
+                aria-hidden="true"></i>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item">Dashboard</a></li>
+                <li><a class="dropdown-item">View Profile</a></li>
+                <li><a class="dropdown-item">Change Password</a></li>
+                <li><a class="dropdown-item">Logout</a></li>
+            </ul>
         </div>
     </div>
    </div>
