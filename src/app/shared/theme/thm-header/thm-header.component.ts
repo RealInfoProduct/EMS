@@ -85,6 +85,9 @@ export class ThmHeaderComponent implements OnInit {
   logOut(){
     this.authService.signOut()
   }
+  changepassword(){
+    this.router.navigate(['/changepassword'])
+  }
   
 
   languageChange(event:any){

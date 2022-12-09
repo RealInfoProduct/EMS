@@ -4,6 +4,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { AuthGuard } from './auth/auth.guard';
 import { ForgotpasswordComponent } from './pages/forgotpassword/forgotpassword.component';
+import { ChangepasswordComponent } from './pages/changepassword/changepassword.component';
 
 
 const routes: Routes = [
@@ -23,6 +24,10 @@ const routes: Routes = [
   {
     path:'forgotpassword',
     component:ForgotpasswordComponent,
+  },
+  {
+    path:'changepassword',
+    component:ChangepasswordComponent,
   },
   // {
   //   path:'**',
