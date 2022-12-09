@@ -21,6 +21,7 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { HttpClient, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { SpinnerComponent } from './pages/spinner/spinner.component';
+import { ChangepasswordComponent } from './pages/changepassword/changepassword.component';
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http); 
 }
@@ -31,6 +32,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     LoginComponent,
     RegisterComponent,
     SpinnerComponent,
+    ChangepasswordComponent,
   ],
   imports: [
     BrowserModule,
