@@ -21,12 +21,14 @@
 }
 
 .nav-list {
+    height: calc(100vh - 4rem);
     list-style: none;
-    height: 100%;
+    overflow-y: auto;
+    // height: 100%;
     padding: 0;
     margin-bottom: 0;
     // padding-top: 20px;
-    border-bottom: 1px solid #344459
+    // border-bottom: 1px solid #344459
 }
 
 .nav-list-item {
@@ -34,6 +36,7 @@
     align-items: center;
     height: 60px;
     padding: 0 ;
+    border-bottom: 1px solid #344459;
 
     i {
         font-size: 24px;

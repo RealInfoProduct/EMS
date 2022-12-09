@@ -12,12 +12,14 @@ import { BnNgIdleService } from 'bn-ng-idle';
 export class AppComponent {
   title = 'TMS';
 
+  user
+
   constructor(private authService:AuthService,
               private router:Router, 
               private bnIdle: BnNgIdleService
     ){
      if (this.authService.user != undefined)
-    //  this.authService.user.subscribe(x => this.currentUser = x);
+     this.authService.user.subscribe(x => this.user = x);
    this.bnIdle.startWatching(600).subscribe((res) => {
      if (res) {
       this.authService.signOut()
