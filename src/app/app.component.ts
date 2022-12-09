@@ -20,8 +20,7 @@ export class AppComponent {
     //  this.authService.user.subscribe(x => this.currentUser = x);
    this.bnIdle.startWatching(600).subscribe((res) => {
      if (res) {
-       localStorage.removeItem('UserData')
-       this.router.navigate(['/login']);
+      this.authService.signOut()
      }
    })
   }
