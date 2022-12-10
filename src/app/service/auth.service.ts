@@ -86,5 +86,13 @@ export class AuthService {
       email:data
     })
   }
+
+  changePassword(data:any){
+    return this.http.post<any>('https://identitytoolkit.googleapis.com/v1/accounts:update?key=AIzaSyBSds_wz0u_EeCEstGcDa0RsUDxEvhGkds',{
+      idToken:data.idToken,
+      password:data.password,
+      returnSecureToken:true
+    })
+  }
   
 }

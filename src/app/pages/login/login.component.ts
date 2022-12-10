@@ -86,6 +86,8 @@ export class LoginComponent implements OnInit {
       },
         err => {
         this.error = err.error.error.message
+        setTimeout(() => { this.error = undefined }, 5000);
+
       })
   }
 
