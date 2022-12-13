@@ -19,7 +19,7 @@
         <li routerLink="#" class="nav-list-item" routerLinkActive="active">
             <i class="fa fa-cog" aria-hidden="true"></i> <span>{{'MENUBAR.Settings' | translate}}</span> 
         </li>
-        <li routerLink="/login" class="nav-list-item" routerLinkActive="active">
+        <li (click)="logout()" class="nav-list-item" routerLinkActive="active">
             <i class="fa fa-sign-in" aria-hidden="true"></i> <span>{{'MENUBAR.Logout' | translate}}</span> 
         </li>
     </ul>    
