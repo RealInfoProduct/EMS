@@ -44,7 +44,7 @@ export class AuthService {
   signOut(){
     this.user.next(null)
     this.router.navigate(['/login']);
-    localStorage.removeItem('UserData')
+    sessionStorage.removeItem('UserData')
     // if(this.tokenExpirationTimer){
     //   clearTimeout(this.tokenExpirationTimer);
     // }
@@ -59,7 +59,7 @@ export class AuthService {
   // }
 
   autoSignIn(){
-    const userDataList = localStorage.getItem('UserData');
+    const userDataList = sessionStorage.getItem('UserData');
     const userData = JSON.parse(userDataList)
     if(!userData){
       return
@@ -77,7 +77,7 @@ export class AuthService {
     const user =  new User(email,userId,token,expirationDate)
     // this.autoSignOut(expiredIn*1000)    
     this.user.next(user);
-    localStorage.setItem('UserData',JSON.stringify(user) )
+    sessionStorage.setItem('UserData',JSON.stringify(user) )
   } 
 
   forgotPassword(data:any){

@@ -21,6 +21,13 @@
   right: 50%
 }
 
+:host ::ng-deep .p-button:enabled:hover {
+    background: $button-bg-color;
+    color: #ffffff;
+    border-color: $button-bg-color;
+    box-shadow: $box-shadow-1;
+}
+
 :host ::ng-deep .p-confirm-dialog-reject {
   background: $button-bg-color;
 }
@@ -39,5 +46,6 @@
 
 ::-webkit-scrollbar-thumb {
   background: #ffffffe0;
+  // background: #909aa6;
   border-radius: 10px;
 }

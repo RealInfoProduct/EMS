@@ -1,6 +1,7 @@
 import { Component, OnInit,Input } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { MenuItem } from 'primeng/api';
+import { AuthService } from 'src/app/service/auth.service';
 
 
 @Component({
@@ -14,7 +15,7 @@ export class ThmMenubarComponent implements OnInit {
   list:any 
   // @Input() sideNavStatus: boolean = false
   // @Input() sideNavStatusClose: boolean = false
-  constructor(private translate:TranslateService) { 
+  constructor(private translate:TranslateService , private authService:AuthService) { 
   //   this.translate.get(['DASHBOARD','Add_Employee','Bonus_Attendance','Report','Settings','Logout']).subscribe(translations => {
     
   //   this.list= [
@@ -56,6 +57,9 @@ export class ThmMenubarComponent implements OnInit {
   
   ngOnInit(): void {
 
+  }
+  logout(){
+    this.authService.signOut()
   }
 
   }
