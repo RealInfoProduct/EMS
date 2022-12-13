@@ -38,7 +38,7 @@ export class ChangepasswordComponent implements OnInit {
 
     ngOnInit(): void {
       this.buildForm()
-      const userDataList = localStorage.getItem('UserData');
+      const userDataList = sessionStorage.getItem('UserData');
       this.token = JSON.parse(userDataList)._token
     }
   
